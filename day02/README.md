@@ -2,7 +2,7 @@
 
 1. Vì sao cần hiểu các chỉ số hệ thống
 
-Trong System Design, mọi quyết định kiến trúc đều xoay quanh câu hỏi:
++ Trong System Design, mọi quyết định kiến trúc đều xoay quanh câu hỏi:
 
 Hệ thống cần nhanh đến mức nào, chịu tải bao nhiêu, và ổn định ra sao?
 
