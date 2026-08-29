@@ -1,0 +1,28 @@
+i#!/bin/bash
+
+# repo branch
+BRANCH="main"
+
+# file commit
+FILE="daily-log.txt"
+
+# ngày bắt đầu và kết thúc
+START="2026-03-04"
+END="2026-03-09"
+
+current=$START
+
+while [ "$current" != "$(date -I -d "$END + 1 day")" ]
+do
+  echo "Commit for $current" >> $FILE
+
+  git add $FILE
+
+  GIT_AUTHOR_DATE="$current 10:00:00" \
+  GIT_COMMITTER_DATE="$current 10:00:00" \
+  git commit -m "update log $current"
+
+  current=$(date -I -d "$current + 1 day")
+done
+
+git push origin $BRANCH

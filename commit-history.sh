@@ -3,9 +3,9 @@
 BRANCH="master"
 FILE="daily-log.txt"
 
-for day in {17..23}
+for day in {01..31}
 do
-  DATE="2026-03-$day"
+  DATE="2026-12-$day"
 
   echo "Commit for $DATE" >> $FILE
 
